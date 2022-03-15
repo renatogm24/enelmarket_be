@@ -11,7 +11,7 @@ import java.util.Objects;
 public class FileUtils {
 
     public static File convertMultipartToFile(MultipartFile file) throws IOException {
-        File convertedFile = new File(Objects.requireNonNull(file.getOriginalFilename()));
+        File convertedFile = new File(Objects.requireNonNull("/home/ubuntu/enelmarket/"+file.getOriginalFilename()));
         FileOutputStream fileOutputStream = new FileOutputStream(convertedFile);
         fileOutputStream.write(file.getBytes());
         fileOutputStream.close();

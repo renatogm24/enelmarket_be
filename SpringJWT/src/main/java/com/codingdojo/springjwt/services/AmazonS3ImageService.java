@@ -95,7 +95,7 @@ public class AmazonS3ImageService extends AmazonClientService {
 
             // If IOException on conversion or any file manipulation, call exception.
             //log.warn(MessageUtil.getMessage("multipart.to.file.convert.except"), e);
-            throw new FileConversionException();
+            throw new FileConversionException(e.getMessage(),e);
         }
 
         return fileUrl;
